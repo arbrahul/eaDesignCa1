@@ -1,4 +1,4 @@
-FROM golang:latest AS build
+FROM golang:1.13-alpine AS build
 WORKDIR /src/
 COPY . /src/
 RUN CGO_ENABLED=0 go build -o /bin/allthenews
