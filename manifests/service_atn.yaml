@@ -9,7 +9,8 @@ spec:
   - port: 9090
     protocol: TCP
     targetPort: 8080
-    nodePort: 31916
+    #nodePort: 31916
   selector:
     app: atn
-  type: NodePort
+  #type: NodePort
+  type: ClusterIP
