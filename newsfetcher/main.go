@@ -11,6 +11,10 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+
+	if rand.Intn(90) < 30 {
+		panic("flaky error occurred ")
+    } 
 	http.HandleFunc("/", handler)
 	log.Fatal(http.ListenAndServe(":8888", nil))
 }
