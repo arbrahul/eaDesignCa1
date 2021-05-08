@@ -1,17 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: wf-deployment
+  name: nf-deployment
+  labels:
+    app: nf
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: wf
+      app: nf
   template:
     metadata:
       labels:
-        app: wf
+        app: nf
     spec:
       containers:
-        - name: wf
-          image: x00169650/weatherfetcher:v1
+        - name: nf
+          image: x00169650/newsfetcher:v2

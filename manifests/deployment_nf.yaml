@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nf-deployment
+  labels:
+    app: nf
 spec:
   replicas: 1
   selector:
@@ -14,4 +16,4 @@ spec:
     spec:
       containers:
         - name: nf
-          image: <your docker hub name>/newsfetcher:v1
+          image: x00169650/newsfetcher:v1

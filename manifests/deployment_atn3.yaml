@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: atn
-          image: <your docker hub name>/allthenews:v3
+          image: x00169650/allthenews:v3
           args: ["news", "http://nf-service:8888", "weather", "http://wf-service:8888"]
           ports:
           - containerPort: 8080	  
