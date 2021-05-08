@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"math/rand"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
